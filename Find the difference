@@ -1,0 +1,16 @@
+def difference(string1, string2):
+    return list(set(string2) - set(string1))
+    
+string1 = input("Enter word1: ")
+string2 = input("Enter word2: ")
+
+s1 = list(string1)
+s2 = list(string2)
+print(s1)
+print(s2)
+
+result = difference(s1, s2)
+if result:
+    print(f"The appended character is: {result[0]}")
+else:
+    print(0)
