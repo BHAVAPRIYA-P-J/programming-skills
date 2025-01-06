@@ -1,0 +1,22 @@
+
+word1 = input("Enter word1: ")
+word2 = input("Enter word2: ")
+array1 = list(word1)
+array2 = list(word2)
+print("Array1:", array1)
+print("Array2:", array2)
+
+alternate1 = array1[::2]  
+alternate2 = array2[::2] 
+print("Alternate1:", alternate1)
+print("Alternate2:", alternate2)
+
+
+merge = [array1[i] + array2[i] for i in range(min(len(array1), len(array2)))]  
+if len(array1) > len(array2):
+    merge.extend(array1[len(array2):]) 
+if len(array2) > len(array1):
+    merge.extend(array2[len(array1):])  
+
+
+print("Merged result:", merge)
